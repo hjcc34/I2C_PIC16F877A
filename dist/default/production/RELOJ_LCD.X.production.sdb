@@ -1,0 +1,376 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"18 E:\MPLAB XC\RELOJ_LCD.X\BCD_CONVER.c
+[v _BCD_TO_DEC BCD_TO_DEC `(uc  1 e 1 0 ]
+"7 E:\MPLAB XC\RELOJ_LCD.X\DS1307.c
+[v _CFG_DS1307 CFG_DS1307 `(v  1 e 1 0 ]
+"14
+[v _lectura_tiempo_posX lectura_tiempo_posX `(v  1 e 1 0 ]
+"28
+[v _lectura_tiempo_posY lectura_tiempo_posY `(v  1 e 1 0 ]
+"41
+[v _READ_DS1307 READ_DS1307 `(v  1 e 1 0 ]
+"55
+[v _AJUSTE_DS1307 AJUSTE_DS1307 `(v  1 e 1 0 ]
+"10 E:\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 E:\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 E:\Microchip\xc8\v2.50\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"4 E:\MPLAB XC\RELOJ_LCD.X\I2C.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+"16
+[v _I2C_Check I2C_Check `(v  1 e 1 0 ]
+"24
+[v _I2C_Cmd I2C_Cmd `(v  1 e 1 0 ]
+"63
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+"112
+[v _I2C_Read I2C_Read `(v  1 e 1 0 ]
+"135
+[v _I2C_P I2C_P `(v  1 e 1 0 ]
+"4 E:\MPLAB XC\RELOJ_LCD.X\LCD.c
+[v _Lcd_inicio Lcd_inicio `(v  1 e 1 0 ]
+"18
+[v _Lcd_print_string Lcd_print_string `(v  1 e 1 0 ]
+"38
+[v _Lcd_cmd Lcd_cmd `(v  1 e 1 0 ]
+"44
+[v _Lcd_out_cmd Lcd_out_cmd `(v  1 e 1 0 ]
+"53
+[v _Lcd_out_data Lcd_out_data `(v  1 e 1 0 ]
+"69
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"75
+[v _Lcd_pos_x Lcd_pos_x `(v  1 e 1 0 ]
+"83
+[v _Lcd_pos_y Lcd_pos_y `(v  1 e 1 0 ]
+"13 E:\MPLAB XC\RELOJ_LCD.X\RELOJ_LCD_MAIN.c
+[v _main main `(v  1 e 1 0 ]
+"13 E:\MPLAB XC\RELOJ_LCD.X/CFG_BCD_TO_DEC_TO_BCD.h
+[v _decenas decenas `uc  1 e 1 0 ]
+[v _unidades unidades `uc  1 e 1 0 ]
+"32 E:\MPLAB XC\RELOJ_LCD.X/CFG_DS1307.h
+[v _dato_ajuste_dia dato_ajuste_dia `uc  1 e 1 0 ]
+[v _dato_ajuste_dia_unidad dato_ajuste_dia_unidad `uc  1 e 1 0 ]
+[v _dato_ajuste_dia_decena dato_ajuste_dia_decena `uc  1 e 1 0 ]
+[v _dato_ajuste_dia_lcd_unidad dato_ajuste_dia_lcd_unidad `uc  1 e 1 0 ]
+[v _dato_ajuste_dia_lcd_decena dato_ajuste_dia_lcd_decena `uc  1 e 1 0 ]
+"13 E:\MPLAB XC\RELOJ_LCD.X/CFG_I2C.h
+[v _DATO_I2C DATO_I2C `uc  1 e 1 0 ]
+"166 C:/Users/Familia CS/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S129 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"233
+[u S138 . 1 `S129 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES138  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S199 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+]
+"414
+[u S203 . 1 `S199 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES203  1 e 1 @9 ]
+"808
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"815
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S28 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1275
+[s S35 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S39 . 1 `S28 1 . 1 0 `S35 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES39  1 e 1 @129 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1754
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+[s S251 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"1771
+[u S260 . 1 `S251 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES260  1 e 1 @145 ]
+"1823
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"1830
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S275 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"1884
+[s S284 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S289 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S295 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S300 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S305 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S310 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S315 . 1 `S275 1 . 1 0 `S284 1 . 1 0 `S289 1 . 1 0 `S295 1 . 1 0 `S300 1 . 1 0 `S305 1 . 1 0 `S310 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES315  1 e 1 @148 ]
+"2087
+[v _CMCON CMCON `VEuc  1 e 1 @156 ]
+[s S59 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 . 1 0 :2:4 
+`uc 1 ADCS2 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2248
+[s S64 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+]
+[u S69 . 1 `S59 1 . 1 0 `S64 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES69  1 e 1 @159 ]
+"2972
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"2975
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"13 E:\MPLAB XC\RELOJ_LCD.X\RELOJ_LCD_MAIN.c
+[v _main main `(v  1 e 1 0 ]
+{
+"49
+} 0
+"41 E:\MPLAB XC\RELOJ_LCD.X\DS1307.c
+[v _READ_DS1307 READ_DS1307 `(v  1 e 1 0 ]
+{
+"51
+} 0
+"28
+[v _lectura_tiempo_posY lectura_tiempo_posY `(v  1 e 1 0 ]
+{
+[v lectura_tiempo_posY@registro_DS1307 registro_DS1307 `uc  1 p 1 wreg ]
+[v lectura_tiempo_posY@registro_DS1307 registro_DS1307 `uc  1 p 1 wreg ]
+[v lectura_tiempo_posY@pos_uni pos_uni `uc  1 p 1 2 ]
+[v lectura_tiempo_posY@pos_dec pos_dec `uc  1 p 1 3 ]
+[v lectura_tiempo_posY@pos_D3 pos_D3 `uc  1 p 1 4 ]
+[v lectura_tiempo_posY@caracter caracter `uc  1 p 1 5 ]
+"30
+[v lectura_tiempo_posY@registro_DS1307 registro_DS1307 `uc  1 p 1 6 ]
+"39
+} 0
+"14
+[v _lectura_tiempo_posX lectura_tiempo_posX `(v  1 e 1 0 ]
+{
+[v lectura_tiempo_posX@registro_DS1307 registro_DS1307 `uc  1 p 1 wreg ]
+[v lectura_tiempo_posX@registro_DS1307 registro_DS1307 `uc  1 p 1 wreg ]
+[v lectura_tiempo_posX@pos_uni pos_uni `uc  1 p 1 2 ]
+[v lectura_tiempo_posX@pos_dec pos_dec `uc  1 p 1 3 ]
+[v lectura_tiempo_posX@pos_D3 pos_D3 `uc  1 p 1 4 ]
+[v lectura_tiempo_posX@caracter caracter `uc  1 p 1 5 ]
+"16
+[v lectura_tiempo_posX@registro_DS1307 registro_DS1307 `uc  1 p 1 6 ]
+"25
+} 0
+"75 E:\MPLAB XC\RELOJ_LCD.X\LCD.c
+[v _Lcd_pos_x Lcd_pos_x `(v  1 e 1 0 ]
+{
+[v Lcd_pos_x@POSx POSx `uc  1 p 1 wreg ]
+"77
+[v Lcd_pos_x@a a `uc  1 a 1 3 ]
+"75
+[v Lcd_pos_x@POSx POSx `uc  1 p 1 wreg ]
+"78
+[v Lcd_pos_x@POSx POSx `uc  1 p 1 2 ]
+"81
+} 0
+"63 E:\MPLAB XC\RELOJ_LCD.X\I2C.c
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+{
+[v I2C_Write@DirW DirW `uc  1 p 1 wreg ]
+[v I2C_Write@DirW DirW `uc  1 p 1 wreg ]
+[v I2C_Write@CmdW CmdW `uc  1 p 1 12 ]
+[v I2C_Write@DirW2 DirW2 `uc  1 p 1 13 ]
+"65
+[v I2C_Write@DirW DirW `uc  1 p 1 1 ]
+"110
+} 0
+"112
+[v _I2C_Read I2C_Read `(v  1 e 1 0 ]
+{
+"133
+} 0
+"18 E:\MPLAB XC\RELOJ_LCD.X\BCD_CONVER.c
+[v _BCD_TO_DEC BCD_TO_DEC `(uc  1 e 1 0 ]
+{
+[v BCD_TO_DEC@dato dato `uc  1 p 1 wreg ]
+[v BCD_TO_DEC@dato dato `uc  1 p 1 wreg ]
+"20
+[v BCD_TO_DEC@dato dato `uc  1 p 1 1 ]
+"34
+} 0
+"4 E:\MPLAB XC\RELOJ_LCD.X\LCD.c
+[v _Lcd_inicio Lcd_inicio `(v  1 e 1 0 ]
+{
+"16
+} 0
+"4 E:\MPLAB XC\RELOJ_LCD.X\I2C.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+{
+"14
+} 0
+"7 E:\MPLAB XC\RELOJ_LCD.X\DS1307.c
+[v _CFG_DS1307 CFG_DS1307 `(v  1 e 1 0 ]
+{
+"11
+} 0
+"55
+[v _AJUSTE_DS1307 AJUSTE_DS1307 `(v  1 e 1 0 ]
+{
+"158
+} 0
+"83 E:\MPLAB XC\RELOJ_LCD.X\LCD.c
+[v _Lcd_pos_y Lcd_pos_y `(v  1 e 1 0 ]
+{
+[v Lcd_pos_y@POSy POSy `uc  1 p 1 wreg ]
+"85
+[v Lcd_pos_y@a a `uc  1 a 1 3 ]
+"83
+[v Lcd_pos_y@POSy POSy `uc  1 p 1 wreg ]
+"86
+[v Lcd_pos_y@POSy POSy `uc  1 p 1 2 ]
+"89
+} 0
+"38
+[v _Lcd_cmd Lcd_cmd `(v  1 e 1 0 ]
+{
+[v Lcd_cmd@comando comando `uc  1 p 1 wreg ]
+[v Lcd_cmd@comando comando `uc  1 p 1 wreg ]
+"40
+[v Lcd_cmd@comando comando `uc  1 p 1 2 ]
+"42
+} 0
+"135 E:\MPLAB XC\RELOJ_LCD.X\I2C.c
+[v _I2C_P I2C_P `(v  1 e 1 0 ]
+{
+"143
+} 0
+"24
+[v _I2C_Cmd I2C_Cmd `(v  1 e 1 0 ]
+{
+[v I2C_Cmd@Dir Dir `uc  1 p 1 wreg ]
+[v I2C_Cmd@Dir Dir `uc  1 p 1 wreg ]
+[v I2C_Cmd@Cfg Cfg `uc  1 p 1 12 ]
+[v I2C_Cmd@Cmd Cmd `uc  1 p 1 13 ]
+"26
+[v I2C_Cmd@Dir Dir `uc  1 p 1 1 ]
+"61
+} 0
+"16
+[v _I2C_Check I2C_Check `(v  1 e 1 0 ]
+{
+"22
+} 0
+"18 E:\MPLAB XC\RELOJ_LCD.X\LCD.c
+[v _Lcd_print_string Lcd_print_string `(v  1 e 1 0 ]
+{
+[v Lcd_print_string@POSx POSx `uc  1 p 1 wreg ]
+"33
+[v Lcd_print_string@c c `i  1 a 2 9 ]
+"25
+[v Lcd_print_string@b b `i  1 a 2 7 ]
+"20
+[v Lcd_print_string@a a `uc  1 a 1 11 ]
+"18
+[v Lcd_print_string@POSx POSx `uc  1 p 1 wreg ]
+[v Lcd_print_string@String_x String_x `*.24uc  1 p 1 3 ]
+[v Lcd_print_string@POSy POSy `uc  1 p 1 4 ]
+[v Lcd_print_string@String_y String_y `*.24uc  1 p 1 5 ]
+"21
+[v Lcd_print_string@POSx POSx `uc  1 p 1 6 ]
+"36
+} 0
+"44
+[v _Lcd_out_cmd Lcd_out_cmd `(v  1 e 1 0 ]
+{
+"51
+} 0
+"69
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@a a `uc  1 p 1 wreg ]
+[v Lcd_Write_Char@a a `uc  1 p 1 wreg ]
+"71
+[v Lcd_Write_Char@a a `uc  1 p 1 2 ]
+"73
+} 0
+"53
+[v _Lcd_out_data Lcd_out_data `(v  1 e 1 0 ]
+{
+"60
+} 0
